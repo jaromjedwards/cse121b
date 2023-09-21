@@ -20,8 +20,9 @@ let yearElement = document.querySelector('#year');
 
 nameElement.innerHTML = `<strong>${fullname}</strong>`;
 yearElement.textContent = currentYear;
-imageElement.setAttribute('src', profilePicture);
-imageElement.setAttribute('alt', 'Profile image of Jarom Edwards');
+imageElement = ''
+imageElement.src = profilePicture
+imageElement.alt = 'Profile image of Jarom Edwards';
 
 
 /* Step 5 - Array */
@@ -31,10 +32,14 @@ const favoriteFoods = [
     'goat',
     'butter chicken'
 ]
-foodElement.innnerHTML = 'hi';
+let anotherFood = 'tacos';
+foodElement.textContent = favoriteFoods;
 
+favoriteFoods.push(anotherFood);
+foodElement.innerHTML += `<br>${favoriteFoods}`
 
+favoriteFoods.shift();
+foodElement.innerHTML += `<br>${favoriteFoods}`
 
-
-
-
+favoriteFoods.pop();
+foodElement.innerHTML += `<br>${favoriteFoods}`
